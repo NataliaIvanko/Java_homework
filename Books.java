@@ -2,7 +2,7 @@ package com.company;
 
 public class Books extends Goods{
     private String author;
-    double pageQuantity;
+    double pageQuantity; // почему не private?
 
     public Books(String title, String author, double price, double pageQuantity){
         super(title, price);
