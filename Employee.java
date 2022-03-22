@@ -3,31 +3,33 @@ package com.company;
 public class Employee {
     private String name;
     private double salary;
-    private double monthlyBonus;
 
-    public Employee(String name, double salary,double monthlyBonus) {
+    public Employee(String name, double salary) {
         this.name = name;
         this.salary = salary;
-        this.monthlyBonus = monthlyBonus;
     }
-    public String getName(){
+
+    public String getName() {
         return name;
     }
-    public double getSalary(){
+
+    public double getSalary() {
         return salary;
     }
-    public double getBonus (){
-        return monthlyBonus;
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "name='" + name + '\'' +
+                ", salary=" + salary +
+                '}';
     }
+
     public void getPaid(){
-        double fullSalary = salary + monthlyBonus;
-        System.out.println("My salary is " + fullSalary);
+        System.out.println("My salary is " + salary);
 
     }
-    public String toString(){
-        double fullSalary = salary + monthlyBonus;
-        return "Employee: " + name + ", salary is " + salary + ", bonus is " + monthlyBonus +
-                " full salary is " + fullSalary;
-
+    public void doWork(){
+        System.out.println("default work");
     }
 }

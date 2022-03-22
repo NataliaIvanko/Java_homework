@@ -3,32 +3,33 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-        Manager m1 = new Manager("Jane", 3000, 150, 300);
-        Manager m2 = new Manager("John", 3500, 200, 320);
-        SalesAssistant sa1 = new SalesAssistant("Kate", 1500, 200);
-        SalesAssistant sa2 = new SalesAssistant("Kai", 1400, 420);
+	Programmer p1 = new Programmer("Ivan", 1000);
+    Programmer p2 = new Programmer("Nick", 1500);
+    QAEngineer q1 = new QAEngineer("Lena", 1200);
+    QAEngineer q2 = new QAEngineer("Max", 1100);
+    Manager m1 = new Manager("Jane", 1600, 150);
+        System.out.println(p1);
+        p1.getPaid();
+        p1.doWork();
 
-        Books book1 = new Books("Misery", "Stephen King", 15, 280);
-        Books book2 = new Books("The painted Veil", "Somerset Maugham", 18, 350);
+        System.out.println(p2);
+        System.out.println(q1);
+        q1.getPaid();
+        q1.doWork();
+        System.out.println(q2);
 
-        Poster p1 = new Poster("Happy day", "A family on the beach", 12);
-        Poster p2 = new Poster("Laziness", "A sleeping cat", 10);
+        System.out.println(m1);
+        m1.getPaid();
 
 
-        Employee[] employee = {m1, m2, sa1, sa2};
+
+        Employee[] employee = {p1, p2, q1, q2, new Intern("Jack", 400), m1};
         for (int i = 0; i < employee.length; i++) {
-
-            System.out.println(employee[i].toString());
-
-        }
-        Goods[] goods = {book1, book2, p1, p2};
-        for (int i = 0; i < goods.length; i++) {
-            System.out.println(goods[i].toString());
+         //   System.out.println( employee[i]);
+        //    employee[i].getPaid();
+            employee[i].doWork();
 
         }
+
     }
 }
-
-
-
-
