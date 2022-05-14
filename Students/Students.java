@@ -1,6 +1,6 @@
 package com.company;
 
-public class Students {
+public class Students implements Observer {
     String name;
     int YearOfBirth;
     double gpa;
@@ -26,5 +26,9 @@ public class Students {
     public String toString(){
         return String.format("%s [%d] %5.2f", name, YearOfBirth, gpa);
 
+    }
+    @Override
+    public void handleEvent() {
+        System.out.println("I have seen the task ");
     }
 }
